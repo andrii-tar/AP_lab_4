@@ -3,6 +3,7 @@ from platform import python_version
 from flask import Flask, request
 
 app = Flask(__name__)
+my_num = 24
 
 
 def get_variant(student_id):
@@ -14,14 +15,13 @@ def get_variant(student_id):
     print("Current Python Version-", python_version())
 
 
-@app.route('/api/v1/hello-world-24', methods=['GET'])
+@app.route(f'/api/v1/hello-world-{my_num}', methods=['GET'])
 def helloworld():
     if request.method == 'GET':
         # data = {"data": "Hello World"}
         # return jsonify(data)
-        return "Hello World 24", 200
+        return f"Hello World {my_num}", 200
 
 
 if __name__ == '__main__':
-    my_num = 24
     app.run(debug=False)
