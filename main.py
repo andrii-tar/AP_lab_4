@@ -21,5 +21,5 @@ def helloworld():
 
 
 if __name__ == '__main__':
-    get_var
+    get_variant(my_num)
     app.run(debug=False)
