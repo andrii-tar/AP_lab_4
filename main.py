@@ -21,4 +21,5 @@ def helloworld():
 
 
 if __name__ == '__main__':
+    get_var
     app.run(debug=False)
